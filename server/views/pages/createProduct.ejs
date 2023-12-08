@@ -1,0 +1,23 @@
+<%- include('../header.ejs') -%>
+    <h1>create product page</h1>
+
+    <form class="container" action="/products/create" method="post" enctype="multipart/form-data">
+        <label for="name">
+            name <input type="text" id="name" name="name">
+        </label>
+        <label for="price">
+            price <input type="text" id="price" name="price">
+        </label>
+        <label for="description">
+            description <input type="text" id="description" name="description">
+        </label>
+        <label for="centre">
+            <select name="centreName">
+                <% centres.forEach(function(centre){ %>
+                    <option value="<%= centre.name %>"><%= centre.name %></option>
+                  <% }) %>
+            </select>
+        </label>
+        <input type="file" name="image" accept=".jpg;.png;.jpeg" >
+        <input type="submit">
+    </form>

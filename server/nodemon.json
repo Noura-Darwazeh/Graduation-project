@@ -1,0 +1,5 @@
+{
+  "env": {
+    "JWT_PRIVATE_KEY": "_ANY_PRIVATE_JWT_KEY_"
+  }
+}

@@ -1,0 +1,22 @@
+<%- include('../header.ejs') -%>
+    <h1>create product page</h1>
+
+    <form class="container" action="/centres/<%=centre.id %>/update" method="post">
+        <div class="row">
+            <label for="name" class="form-label col">
+                name <input type="text" id="name" class="form-control" name="name" value="<%= centre.name %>">
+            </label>
+            <label for="phone" class="form-label col">
+                phone <input type="text" id="phone" class="form-control" name="phone" maxlength="6" value="<%= centre.phone.slice(4,centre.phone.length) %>">
+            </label>
+        </div>
+
+        <div class="row">
+           timesOfWork <input type="text" value="<%= centre.timesOfWork %>" name="timesOfWork">
+        </div>
+        
+        
+        <input id="saveButton" class="btn btn-primary ps-4 pe-4" type="submit" value="update">
+    </form>
+
+<%- include('../footer.ejs') -%>

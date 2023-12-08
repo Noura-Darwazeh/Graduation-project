@@ -1,0 +1,152 @@
+import 'package:flutter/material.dart';
+import 'package:soft/product_page_s.dart';
+import 'package:flutter/src/painting/image_resolution.dart';
+import 'bottom_bar.dart';
+
+class products_s extends StatefulWidget{
+  @override
+  _products_s createState()=>_products_s();
+
+}
+class _products_s extends State<products_s> with SingleTickerProviderStateMixin{
+  late TabController tabController;
+  @override
+  void initState(){
+    super.initState();
+    tabController=TabController(length: 10000, vsync: this);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          gradient:
+          new LinearGradient(colors: [Colors.black87, Colors.pink])),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          centerTitle: true,
+          leading: IconButton(
+              onPressed: (){},icon:Icon(Icons.arrow_back,color: Colors.black,)
+          ),
+          title: Text('Products',style: TextStyle(fontSize: 20,color: Color(0xFF545D68)),),
+          actions: <Widget>[
+            IconButton(
+                onPressed: (){},icon:Icon(Icons.notifications_none,color: Colors.black,)
+            ),
+
+          ],
+        ),
+        body: ListView(
+          padding:EdgeInsets.only(left: 20),
+          children:<Widget>[
+            SizedBox(height: 15),
+            Text('Categories',style: TextStyle(
+              fontSize: 42,fontWeight: FontWeight.w900,
+            ),),
+            SizedBox(
+              height: 15,
+            ),TabBar(
+                controller:tabController,
+                indicatorColor: Colors.transparent,
+
+                isScrollable: true,
+                labelColor: Color(0xFFC88D67),
+                labelPadding: EdgeInsets.only(right: 45),
+                unselectedLabelColor: Color(0xFFCDCDCD),
+
+                tabs:<Widget> [
+                  Tab(
+                      child: TextButton(
+                        child:Text('Hair',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+
+                      },
+                      )
+
+                  ),
+                  Tab(
+                      child: TextButton(
+                        child:Text('Body',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+
+                      },
+                      )
+
+                  ),
+                  Tab(
+                      child: TextButton(
+                        child:Text('Skin',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+                      },
+                      )
+
+                  ),
+                  Tab(
+                      child: TextButton(
+                        child:Text('Eyes',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+
+                      },
+                      )
+
+                  ),
+                  Tab(
+                      child: TextButton(
+                        child:Text('Nails',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+
+                      },
+                      )
+
+                  ),
+                  Tab(
+                      child: TextButton(
+                        child:Text('Mackeup',style: TextStyle(
+                            fontWeight: FontWeight.bold,fontSize: 21,color: Colors.black
+                        ),)
+                        ,onPressed: (){
+
+                      },
+                      )
+
+                  ),
+                ]
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: double.infinity,
+              child: TabBarView(
+                controller: tabController,
+                children: [
+                  product_page_s(),
+                  product_page_s(),
+                  product_page_s(),
+                ],
+
+              ),
+            )
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},backgroundColor: Color(0xFFF17532),
+          child: Icon(Icons.shopping_bag),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar:bar(),
+
+      ),
+    );
+  }
+
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746450331364",
+    "project_id": "saloonati-fdf71",
+    "storage_bucket": "saloonati-fdf71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746450331364:android:29664dbcec58f122ee2ef1",
+        "android_client_info": {
+          "package_name": "com.example.soft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746450331364-5s975s38r9aqrcjj61l09lm06eu52s7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf3GeZNy9ihDYDKwIbJz00LZxhXsrCh2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746450331364-5s975s38r9aqrcjj61l09lm06eu52s7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

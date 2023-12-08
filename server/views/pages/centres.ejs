@@ -1,0 +1,27 @@
+<%- include('../header.ejs') -%>
+
+<div class="header-display">
+    <h1>centres page</h1>
+    <a class="add-centres btn btn-primary" href="/centres/create">add centres</a>
+</div>
+
+
+  <% centres.forEach(function(centre){ %>
+    <div class="container">
+      <div class="card mb-3">
+        <div class="card-header product-header">
+          <span><%= centre.name %></span>
+        </div>
+        <div class="card-body card-img">
+          <img src="<%= centre.imageUrl %>" width="100%"/>
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+          <a href="/centres/<%= centre._id %>/update" class="btn btn-info me-2 ps-3 pe-3 fw-bold">update</a>
+          <a href="/centres/<%= centre._id %>/delete" class="btn btn-danger ps-3 pe-3 fw-bold">delete</a>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+  
+
+<%- include('../footer.ejs') -%>

@@ -1,0 +1,15 @@
+<%- include('header.ejs') -%>
+login page
+<form action="/admin/login" method="post" class="col d-flex flex-column position-absolute translate-middle top-50 start-50 container">
+    <label class="form-label row">
+        username <input type="text" required class="form-control" name="username">
+    </label>
+
+    <label class="form-label row">
+        password <input type="password" required class="form-control" name="password">
+    </label>
+
+    <input type="submit" value="login" class="align-self-center btn btn-primary ps-3 pe-3">
+</form>
+
+<%- include('footer.ejs') -%>
